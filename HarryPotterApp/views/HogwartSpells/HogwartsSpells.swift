@@ -36,6 +36,7 @@ struct HogwartsSpells: View {
                     Color("appBackground")
                 )
             }
+            .padding(20)
             .searchable(text: $searchText,prompt: "Search a spell...")
             .onAppear{
                 let appereance = UISearchBar.appearance()

@@ -18,16 +18,17 @@ struct HouseStaff: View {
                 .bold()
                 .foregroundColor(Color.white)
                 .padding(.top,10)
-            List{
-                ForEach(staffViewModel.staffList, id: \.id){
-                    staff in
-                    CharacterCard(staff: staff)
-                }
-                .listRowSeparator(.hidden)
-                .listRowBackground(Color.clear)
+            NavigationStack{
+                ScrollView{
+                    VStack(spacing: 20){
+                        ForEach(staffViewModel.staffList, id: \.id){
+                            staff in
+                            CharacterCard(staff: staff)
+                        }
+                    }
+                }.background(Color("appBackground"))
             }
-            .scrollContentBackground(.hidden)
-            .background(Color("appBackground"))
+            .padding(20)
         }
         .background(Color("appBackground"))
     }
