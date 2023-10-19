@@ -14,6 +14,22 @@
 		D6F1F1372ADDD235004CD0B4 /* HarryPotterAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F1362ADDD235004CD0B4 /* HarryPotterAppTests.swift */; };
 		D6F1F1412ADDD235004CD0B4 /* HarryPotterAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F1402ADDD235004CD0B4 /* HarryPotterAppUITests.swift */; };
 		D6F1F1432ADDD235004CD0B4 /* HarryPotterAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F1422ADDD235004CD0B4 /* HarryPotterAppUITestsLaunchTests.swift */; };
+		D6F1F1532ADDD289004CD0B4 /* HogwartsHouses.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F1522ADDD289004CD0B4 /* HogwartsHouses.swift */; };
+		D6F1F1572ADDD405004CD0B4 /* Houses.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F1562ADDD405004CD0B4 /* Houses.swift */; };
+		D6F1F1592ADDD55D004CD0B4 /* HouseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F1582ADDD55D004CD0B4 /* HouseCard.swift */; };
+		D6F1F15B2ADDEB01004CD0B4 /* HouseStaff.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F15A2ADDEB01004CD0B4 /* HouseStaff.swift */; };
+		D6F1F15D2ADDEB3F004CD0B4 /* CharacterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F15C2ADDEB3F004CD0B4 /* CharacterCard.swift */; };
+		D6F1F15F2ADDF20A004CD0B4 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F15E2ADDF20A004CD0B4 /* Character.swift */; };
+		D6F1F1642ADE05E3004CD0B4 /* HogwartsSpells.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F1632ADE05E3004CD0B4 /* HogwartsSpells.swift */; };
+		D6F1F1662ADE05F1004CD0B4 /* SpellsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F1652ADE05F1004CD0B4 /* SpellsCard.swift */; };
+		D6F1F1682ADE0914004CD0B4 /* Spell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F1672ADE0914004CD0B4 /* Spell.swift */; };
+		D6F1F16B2ADE0BC0004CD0B4 /* SpellsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F16A2ADE0BC0004CD0B4 /* SpellsViewModel.swift */; };
+		D6F1F16E2ADE0F06004CD0B4 /* StaffViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F16D2ADE0F06004CD0B4 /* StaffViewModel.swift */; };
+		D6F1F1702AE1B7B0004CD0B4 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6F1F16F2AE1B7B0004CD0B4 /* SplashScreen.storyboard */; };
+		D6F1F1742AE1C025004CD0B4 /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F1732AE1C025004CD0B4 /* CharacterView.swift */; };
+		D6F1F1772AE1C0A2004CD0B4 /* CharacterPhotoFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F1762AE1C0A2004CD0B4 /* CharacterPhotoFrame.swift */; };
+		D6F1F1792AE1C5FA004CD0B4 /* CharacterInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F1782AE1C5F9004CD0B4 /* CharacterInfo.swift */; };
+		D6F1F17C2AE1CAB2004CD0B4 /* WandInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F17B2AE1CAB2004CD0B4 /* WandInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +60,22 @@
 		D6F1F13C2ADDD235004CD0B4 /* HarryPotterAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HarryPotterAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F1F1402ADDD235004CD0B4 /* HarryPotterAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarryPotterAppUITests.swift; sourceTree = "<group>"; };
 		D6F1F1422ADDD235004CD0B4 /* HarryPotterAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarryPotterAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D6F1F1522ADDD289004CD0B4 /* HogwartsHouses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HogwartsHouses.swift; sourceTree = "<group>"; };
+		D6F1F1562ADDD405004CD0B4 /* Houses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Houses.swift; sourceTree = "<group>"; };
+		D6F1F1582ADDD55D004CD0B4 /* HouseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseCard.swift; sourceTree = "<group>"; };
+		D6F1F15A2ADDEB01004CD0B4 /* HouseStaff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseStaff.swift; sourceTree = "<group>"; };
+		D6F1F15C2ADDEB3F004CD0B4 /* CharacterCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCard.swift; sourceTree = "<group>"; };
+		D6F1F15E2ADDF20A004CD0B4 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		D6F1F1632ADE05E3004CD0B4 /* HogwartsSpells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HogwartsSpells.swift; sourceTree = "<group>"; };
+		D6F1F1652ADE05F1004CD0B4 /* SpellsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsCard.swift; sourceTree = "<group>"; };
+		D6F1F1672ADE0914004CD0B4 /* Spell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spell.swift; sourceTree = "<group>"; };
+		D6F1F16A2ADE0BC0004CD0B4 /* SpellsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsViewModel.swift; sourceTree = "<group>"; };
+		D6F1F16D2ADE0F06004CD0B4 /* StaffViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffViewModel.swift; sourceTree = "<group>"; };
+		D6F1F16F2AE1B7B0004CD0B4 /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
+		D6F1F1732AE1C025004CD0B4 /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
+		D6F1F1762AE1C0A2004CD0B4 /* CharacterPhotoFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterPhotoFrame.swift; sourceTree = "<group>"; };
+		D6F1F1782AE1C5F9004CD0B4 /* CharacterInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterInfo.swift; sourceTree = "<group>"; };
+		D6F1F17B2AE1CAB2004CD0B4 /* WandInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WandInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +126,13 @@
 		D6F1F1242ADDD233004CD0B4 /* HarryPotterApp */ = {
 			isa = PBXGroup;
 			children = (
+				D6F1F1552ADDD3EC004CD0B4 /* views */,
+				D6F1F1542ADDD3E4004CD0B4 /* models */,
 				D6F1F1252ADDD233004CD0B4 /* HarryPotterAppApp.swift */,
 				D6F1F1272ADDD233004CD0B4 /* ContentView.swift */,
 				D6F1F1292ADDD235004CD0B4 /* Assets.xcassets */,
 				D6F1F12B2ADDD235004CD0B4 /* Preview Content */,
+				D6F1F16F2AE1B7B0004CD0B4 /* SplashScreen.storyboard */,
 			);
 			path = HarryPotterApp;
 			sourceTree = "<group>";
@@ -125,6 +160,91 @@
 				D6F1F1422ADDD235004CD0B4 /* HarryPotterAppUITestsLaunchTests.swift */,
 			);
 			path = HarryPotterAppUITests;
+			sourceTree = "<group>";
+		};
+		D6F1F14F2ADDD24C004CD0B4 /* HogwartHouses */ = {
+			isa = PBXGroup;
+			children = (
+				D6F1F1522ADDD289004CD0B4 /* HogwartsHouses.swift */,
+				D6F1F1582ADDD55D004CD0B4 /* HouseCard.swift */,
+			);
+			path = HogwartHouses;
+			sourceTree = "<group>";
+		};
+		D6F1F1502ADDD25A004CD0B4 /* HogwartStaff */ = {
+			isa = PBXGroup;
+			children = (
+				D6F1F16C2ADE0EF8004CD0B4 /* ViewModel */,
+				D6F1F15A2ADDEB01004CD0B4 /* HouseStaff.swift */,
+				D6F1F15C2ADDEB3F004CD0B4 /* CharacterCard.swift */,
+			);
+			path = HogwartStaff;
+			sourceTree = "<group>";
+		};
+		D6F1F1512ADDD262004CD0B4 /* HogwartSpells */ = {
+			isa = PBXGroup;
+			children = (
+				D6F1F1692ADE0BA7004CD0B4 /* ViewModel */,
+				D6F1F1632ADE05E3004CD0B4 /* HogwartsSpells.swift */,
+				D6F1F1652ADE05F1004CD0B4 /* SpellsCard.swift */,
+			);
+			path = HogwartSpells;
+			sourceTree = "<group>";
+		};
+		D6F1F1542ADDD3E4004CD0B4 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				D6F1F1562ADDD405004CD0B4 /* Houses.swift */,
+				D6F1F15E2ADDF20A004CD0B4 /* Character.swift */,
+				D6F1F1672ADE0914004CD0B4 /* Spell.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		D6F1F1552ADDD3EC004CD0B4 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				D6F1F1722AE1C013004CD0B4 /* CharacterView */,
+				D6F1F1512ADDD262004CD0B4 /* HogwartSpells */,
+				D6F1F1502ADDD25A004CD0B4 /* HogwartStaff */,
+				D6F1F14F2ADDD24C004CD0B4 /* HogwartHouses */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		D6F1F1692ADE0BA7004CD0B4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D6F1F16A2ADE0BC0004CD0B4 /* SpellsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D6F1F16C2ADE0EF8004CD0B4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D6F1F16D2ADE0F06004CD0B4 /* StaffViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D6F1F1722AE1C013004CD0B4 /* CharacterView */ = {
+			isa = PBXGroup;
+			children = (
+				D6F1F1752AE1C08D004CD0B4 /* components */,
+				D6F1F1732AE1C025004CD0B4 /* CharacterView.swift */,
+			);
+			path = CharacterView;
+			sourceTree = "<group>";
+		};
+		D6F1F1752AE1C08D004CD0B4 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				D6F1F1762AE1C0A2004CD0B4 /* CharacterPhotoFrame.swift */,
+				D6F1F1782AE1C5F9004CD0B4 /* CharacterInfo.swift */,
+				D6F1F17B2AE1CAB2004CD0B4 /* WandInfo.swift */,
+			);
+			path = components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6F1F12D2ADDD235004CD0B4 /* Preview Assets.xcassets in Resources */,
+				D6F1F1702AE1B7B0004CD0B4 /* SplashScreen.storyboard in Resources */,
 				D6F1F12A2ADDD235004CD0B4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,8 +378,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6F1F15D2ADDEB3F004CD0B4 /* CharacterCard.swift in Sources */,
+				D6F1F16E2ADE0F06004CD0B4 /* StaffViewModel.swift in Sources */,
 				D6F1F1282ADDD233004CD0B4 /* ContentView.swift in Sources */,
 				D6F1F1262ADDD233004CD0B4 /* HarryPotterAppApp.swift in Sources */,
+				D6F1F1572ADDD405004CD0B4 /* Houses.swift in Sources */,
+				D6F1F1682ADE0914004CD0B4 /* Spell.swift in Sources */,
+				D6F1F1742AE1C025004CD0B4 /* CharacterView.swift in Sources */,
+				D6F1F1792AE1C5FA004CD0B4 /* CharacterInfo.swift in Sources */,
+				D6F1F1532ADDD289004CD0B4 /* HogwartsHouses.swift in Sources */,
+				D6F1F1592ADDD55D004CD0B4 /* HouseCard.swift in Sources */,
+				D6F1F17C2AE1CAB2004CD0B4 /* WandInfo.swift in Sources */,
+				D6F1F16B2ADE0BC0004CD0B4 /* SpellsViewModel.swift in Sources */,
+				D6F1F1642ADE05E3004CD0B4 /* HogwartsSpells.swift in Sources */,
+				D6F1F1772AE1C0A2004CD0B4 /* CharacterPhotoFrame.swift in Sources */,
+				D6F1F15B2ADDEB01004CD0B4 /* HouseStaff.swift in Sources */,
+				D6F1F1662ADE05F1004CD0B4 /* SpellsCard.swift in Sources */,
+				D6F1F15F2ADDF20A004CD0B4 /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +559,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -452,6 +589,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

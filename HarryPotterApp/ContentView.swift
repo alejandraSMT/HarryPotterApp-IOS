@@ -9,13 +9,30 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView{
+            HogwartsHouses()
+                .tabItem{
+                    Label("Houses",systemImage: "house.fill")
+                }
+                
+            HouseStaff()
+                .tabItem{
+                    Label("Staff",systemImage: "person.3.fill")
+                }
+            HogwartsSpells()
+                .tabItem{
+                    Label("Spells",systemImage: "wand.and.stars.inverse")
+                }
         }
-        .padding()
+        .tint(Color("selectedTab"))
+        .onAppear{
+            
+            let appereance = UITabBar.appearance()
+            appereance.barTintColor = UIColor(Color("tabBar"))
+            appereance.backgroundColor = UIColor(Color("tabBar"))
+            appereance.isTranslucent = true
+            appereance.unselectedItemTintColor = .lightGray
+        }
     }
 }
 
