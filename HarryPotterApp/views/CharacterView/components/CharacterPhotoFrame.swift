@@ -8,16 +8,28 @@
 import SwiftUI
 
 struct CharacterPhotoFrame: View {
+    
+    var photoUrl : String
+    var house : String?
+    
+    func validateHouse() -> String? {
+        if(self.house == "" || self.house == nil){
+            return "No house"
+        }
+        return self.house
+    }
+    
     var body: some View {
         VStack(spacing: 0){
-            AsyncImage(url: URL(string:"https://ik.imagekit.io/hpapi/harry.jpg")){
+            AsyncImage(url: URL(string:"\(photoUrl)")){
                 image in
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 200, height: 220)
-                    .border(Color("frameCharacter"), width: 5)
+                    .border(Color("frameCharacter"),width: 5)
                     .cornerRadius(20, corners: [.topLeft, .topRight])
+                    
             } placeholder: {
                 Rectangle()
                     .frame(width: 200, height: 220)
@@ -28,7 +40,7 @@ struct CharacterPhotoFrame: View {
                 .cornerRadius(20, corners: [.bottomLeft, .bottomRight])
                 .foregroundColor(Color("characterColor"))
                 .overlay(
-                    Text("Gryffindor")
+                    Text(validateHouse()!)
                         .font(.title3)
                 )
         }
@@ -62,6 +74,6 @@ fileprivate struct RoundedCorner: Shape {
 
 struct CharacterPhotoFrame_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterPhotoFrame()
+        CharacterPhotoFrame(photoUrl: "", house: "")
     }
 }

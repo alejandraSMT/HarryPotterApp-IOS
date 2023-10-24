@@ -30,6 +30,7 @@
 		D6F1F1772AE1C0A2004CD0B4 /* CharacterPhotoFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F1762AE1C0A2004CD0B4 /* CharacterPhotoFrame.swift */; };
 		D6F1F1792AE1C5FA004CD0B4 /* CharacterInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F1782AE1C5F9004CD0B4 /* CharacterInfo.swift */; };
 		D6F1F17C2AE1CAB2004CD0B4 /* WandInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F17B2AE1CAB2004CD0B4 /* WandInfo.swift */; };
+		D6F1F1862AE1DDD7004CD0B4 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F1852AE1DDD7004CD0B4 /* CharacterViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		D6F1F1762AE1C0A2004CD0B4 /* CharacterPhotoFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterPhotoFrame.swift; sourceTree = "<group>"; };
 		D6F1F1782AE1C5F9004CD0B4 /* CharacterInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterInfo.swift; sourceTree = "<group>"; };
 		D6F1F17B2AE1CAB2004CD0B4 /* WandInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WandInfo.swift; sourceTree = "<group>"; };
+		D6F1F1852AE1DDD7004CD0B4 /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +233,7 @@
 		D6F1F1722AE1C013004CD0B4 /* CharacterView */ = {
 			isa = PBXGroup;
 			children = (
+				D6F1F1842AE1DDC0004CD0B4 /* viewModel */,
 				D6F1F1752AE1C08D004CD0B4 /* components */,
 				D6F1F1732AE1C025004CD0B4 /* CharacterView.swift */,
 			);
@@ -245,6 +248,14 @@
 				D6F1F17B2AE1CAB2004CD0B4 /* WandInfo.swift */,
 			);
 			path = components;
+			sourceTree = "<group>";
+		};
+		D6F1F1842AE1DDC0004CD0B4 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D6F1F1852AE1DDD7004CD0B4 /* CharacterViewModel.swift */,
+			);
+			path = viewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,6 +399,7 @@
 				D6F1F1792AE1C5FA004CD0B4 /* CharacterInfo.swift in Sources */,
 				D6F1F1532ADDD289004CD0B4 /* HogwartsHouses.swift in Sources */,
 				D6F1F1592ADDD55D004CD0B4 /* HouseCard.swift in Sources */,
+				D6F1F1862AE1DDD7004CD0B4 /* CharacterViewModel.swift in Sources */,
 				D6F1F17C2AE1CAB2004CD0B4 /* WandInfo.swift in Sources */,
 				D6F1F16B2ADE0BC0004CD0B4 /* SpellsViewModel.swift in Sources */,
 				D6F1F1642ADE05E3004CD0B4 /* HogwartsSpells.swift in Sources */,

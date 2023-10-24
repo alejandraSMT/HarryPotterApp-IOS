@@ -11,27 +11,52 @@ struct HouseStaff: View {
     
     @StateObject var staffViewModel = StaffViewModel()
     
+    /*@State private var path = NavigationPath()
+    @StateObject var router: RoutingViewModel*/
+    //@State private var path = [HousesDestinations]()
+    
+    @State private var path = NavigationPath()
+
+    
     var body: some View {
-        VStack(spacing: 2){
-            Text("Hogwarts Staff")
-                .font(.title)
-                .bold()
-                .foregroundColor(Color.white)
-                .padding(.top,10)
-            NavigationStack{
-                ScrollView{
-                    VStack(spacing: 20){
-                        ForEach(staffViewModel.staffList, id: \.id){
-                            staff in
-                            CharacterCard(staff: staff)
+        NavigationStack(path: $path){
+           ZStack{
+               
+               Color("appBackground")
+                   .ignoresSafeArea()
+               
+               VStack(spacing: 20){
+                   Text("Hogwarts Staff")
+                           .font(.title)
+                           .bold()
+                           .foregroundColor(Color.white)
+                           .padding(.top,10)
+                    ScrollView{
+                        VStack(spacing: 20){
+                            ForEach(staffViewModel.staffList, id: \.id){
+                                staff in
+                                CharacterCard(staff: staff)
+                                .onTapGesture {
+                                    path.append(HousesDestinations.characterProfile(id: staff.id))
+                                    }
+                            }
                         }
                     }
-                }.background(Color("appBackground"))
-            }
-            .padding(20)
+                    .navigationDestination(for: HousesDestinations.self, destination: { caso in
+                        switch caso{
+                        case .characterProfile(let id):
+                            CharacterView(id: id)
+                        }
+                    })
+                }
+                .padding(20)
+           }
         }
-        .background(Color("appBackground"))
     }
+}
+
+enum HousesDestinations: Hashable{
+    case characterProfile(id: String)
 }
 
 struct HouseStaff_Previews: PreviewProvider {

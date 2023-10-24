@@ -8,6 +8,30 @@
 import SwiftUI
 
 struct WandInfo: View {
+    
+    var wand: Wand?
+    
+    func validateLength() -> String? {
+        if(self.wand?.length == nil){
+            return ""
+        }
+        return "\(String(describing: self.wand?.length)) inch "
+    }
+    
+    func validateWood() -> String {
+        if(self.wand?.wood == ""){
+            return ""
+        }
+        return " made of \(String(describing: self.wand?.wood ?? "no wood")) "
+    }
+    
+    func validateCore() -> String {
+        if(self.wand?.core == ""){
+            return ""
+        }
+        return "with \(String(describing: self.wand?.core ?? "no")) core."
+    }
+    
     var body: some View {
         VStack(alignment: .center, spacing: 2){
             Rectangle()
@@ -20,17 +44,19 @@ struct WandInfo: View {
                         .foregroundColor(.white)
                 )
                 .padding(.bottom, 10)
-            Text("11 inch wand made of holly wood with phoenix feather core")
-                .font(.title3)
-                .foregroundColor(.white)
-                .multilineTextAlignment(.center)
+            
+            Text(String.getFinalString(wand: wand ?? Wand(wood: nil, core: nil, length: nil)))
+                    .font(.title3)
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
         }
         .frame(maxWidth: 300)
     }
+    
 }
 
 struct WandInfo_Previews: PreviewProvider {
     static var previews: some View {
-        WandInfo()
+        WandInfo(wand: Wand(wood: "", core: "", length: 0.0))
     }
 }

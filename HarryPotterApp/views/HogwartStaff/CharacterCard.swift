@@ -9,6 +9,14 @@ import SwiftUI
 
 struct CharacterCard: View {
     var staff : Character
+    
+    func validateHouse() -> String? {
+        if(staff.house == ""){
+            return "No house"
+        }
+        return staff.house
+    }
+    
     var body: some View {
         HStack{
             AsyncImage(url: URL(string: staff.image ?? "")){
@@ -27,7 +35,7 @@ struct CharacterCard: View {
             VStack(alignment: .leading){
                 Text("\(staff.name ?? "Unnamed")")
                     .font(.subheadline)
-                Text("Species: \(staff.species ?? "No species") - House: \(staff.house ?? "No house")")
+                Text("Species: \(staff.species?.capitalized ?? "No species") - House: \(validateHouse() ?? "No house")")
                     .font(.caption)
             }
         }
@@ -40,6 +48,6 @@ struct CharacterCard: View {
 
 struct CharacterCard_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterCard(staff: Character(id: "1", name: "", species: "", gender: "", house: "", dateOfBirth: "", wizard: true, ancestry: "", patronus: "", hogwartsStudent: true, hogwartsStaff: true, actor: "", alive: true, image: ""))
+        CharacterCard(staff: Character(id: "1", name: "", species: "", gender: "", house: "", dateOfBirth: "", wizard: true, ancestry: "", patronus: "", hogwartsStudent: true, hogwartsStaff: true, actor: "", alive: true, image: "", wand:  Wand(wood: "", core: "", length: 0.0)))
     }
 }

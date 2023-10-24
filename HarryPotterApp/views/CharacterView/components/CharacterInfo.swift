@@ -9,6 +9,26 @@ import SwiftUI
 
 struct CharacterInfo: View {
     
+    var species: String
+    var status : Bool?
+    var patronus: String?
+    
+    func validate() -> String{
+        if(self.status == true){
+            return "Alive"
+        }else{
+            return "Dead"
+        }
+    }
+    
+    func validatePatronus() -> String? {
+        if(self.patronus == "" || self.patronus == nil){
+            return "No patronus"
+        }
+        return self.patronus?.capitalized
+    }
+    
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 10){
             HStack(alignment: .center, spacing: 40){
@@ -22,7 +42,7 @@ struct CharacterInfo: View {
                             .foregroundColor(.white)
                     )
                 HStack(alignment: .center){
-                    Text("Human")
+                    Text("\(species.capitalized)")
                     .font(.title3)
                     .foregroundColor(.white)
                 }
@@ -37,7 +57,7 @@ struct CharacterInfo: View {
                             .font(.title3)
                             .foregroundColor(.white)
                     )
-                Text("Alive")
+                Text("\(validate())")
                     .font(.title3)
                     .foregroundColor(.white)
             }
@@ -51,7 +71,7 @@ struct CharacterInfo: View {
                             .font(.title3)
                             .foregroundColor(.white)
                     )
-                Text("Stag")
+                Text(validatePatronus()!)
                     .font(.title3)
                     .foregroundColor(.white)
             }
@@ -88,6 +108,6 @@ extension Color {
 
 struct CharacterInfo_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterInfo()
+        CharacterInfo(species: "", patronus: "")
     }
 }
