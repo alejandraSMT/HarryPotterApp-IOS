@@ -42,21 +42,20 @@ struct HouseStaff: View {
                             }
                         }
                     }
-                    .navigationDestination(for: HousesDestinations.self, destination: { caso in
-                        switch caso{
+                    .navigationDestination(for: HousesDestinations.self, destination: { views in
+                        switch views {
                         case .characterProfile(let id):
                             CharacterView(id: id)
+                        default:
+                            ProgressView()
                         }
+                        
                     })
                 }
                 .padding(20)
            }
         }
     }
-}
-
-enum HousesDestinations: Hashable{
-    case characterProfile(id: String)
 }
 
 struct HouseStaff_Previews: PreviewProvider {

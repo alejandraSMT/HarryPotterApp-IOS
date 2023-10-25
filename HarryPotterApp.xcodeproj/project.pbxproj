@@ -31,6 +31,9 @@
 		D6F1F1792AE1C5FA004CD0B4 /* CharacterInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F1782AE1C5F9004CD0B4 /* CharacterInfo.swift */; };
 		D6F1F17C2AE1CAB2004CD0B4 /* WandInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F17B2AE1CAB2004CD0B4 /* WandInfo.swift */; };
 		D6F1F1862AE1DDD7004CD0B4 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F1852AE1DDD7004CD0B4 /* CharacterViewModel.swift */; };
+		D6F1F1882AE8605D004CD0B4 /* CharactersByHouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F1872AE8605D004CD0B4 /* CharactersByHouse.swift */; };
+		D6F1F18B2AE8652E004CD0B4 /* CharactersByHouseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F18A2AE8652E004CD0B4 /* CharactersByHouseViewModel.swift */; };
+		D6F1F18E2AE86A46004CD0B4 /* HousesDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F18D2AE86A46004CD0B4 /* HousesDestination.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,9 @@
 		D6F1F1782AE1C5F9004CD0B4 /* CharacterInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterInfo.swift; sourceTree = "<group>"; };
 		D6F1F17B2AE1CAB2004CD0B4 /* WandInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WandInfo.swift; sourceTree = "<group>"; };
 		D6F1F1852AE1DDD7004CD0B4 /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
+		D6F1F1872AE8605D004CD0B4 /* CharactersByHouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersByHouse.swift; sourceTree = "<group>"; };
+		D6F1F18A2AE8652E004CD0B4 /* CharactersByHouseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersByHouseViewModel.swift; sourceTree = "<group>"; };
+		D6F1F18D2AE86A46004CD0B4 /* HousesDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesDestination.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +134,7 @@
 		D6F1F1242ADDD233004CD0B4 /* HarryPotterApp */ = {
 			isa = PBXGroup;
 			children = (
+				D6F1F18C2AE86A37004CD0B4 /* destinations */,
 				D6F1F1552ADDD3EC004CD0B4 /* views */,
 				D6F1F1542ADDD3E4004CD0B4 /* models */,
 				D6F1F1252ADDD233004CD0B4 /* HarryPotterAppApp.swift */,
@@ -167,8 +174,10 @@
 		D6F1F14F2ADDD24C004CD0B4 /* HogwartHouses */ = {
 			isa = PBXGroup;
 			children = (
+				D6F1F1892AE86510004CD0B4 /* viewmodel */,
 				D6F1F1522ADDD289004CD0B4 /* HogwartsHouses.swift */,
 				D6F1F1582ADDD55D004CD0B4 /* HouseCard.swift */,
+				D6F1F1872AE8605D004CD0B4 /* CharactersByHouse.swift */,
 			);
 			path = HogwartHouses;
 			sourceTree = "<group>";
@@ -256,6 +265,22 @@
 				D6F1F1852AE1DDD7004CD0B4 /* CharacterViewModel.swift */,
 			);
 			path = viewModel;
+			sourceTree = "<group>";
+		};
+		D6F1F1892AE86510004CD0B4 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				D6F1F18A2AE8652E004CD0B4 /* CharactersByHouseViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		D6F1F18C2AE86A37004CD0B4 /* destinations */ = {
+			isa = PBXGroup;
+			children = (
+				D6F1F18D2AE86A46004CD0B4 /* HousesDestination.swift */,
+			);
+			path = destinations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,9 +418,12 @@
 				D6F1F16E2ADE0F06004CD0B4 /* StaffViewModel.swift in Sources */,
 				D6F1F1282ADDD233004CD0B4 /* ContentView.swift in Sources */,
 				D6F1F1262ADDD233004CD0B4 /* HarryPotterAppApp.swift in Sources */,
+				D6F1F1882AE8605D004CD0B4 /* CharactersByHouse.swift in Sources */,
 				D6F1F1572ADDD405004CD0B4 /* Houses.swift in Sources */,
 				D6F1F1682ADE0914004CD0B4 /* Spell.swift in Sources */,
+				D6F1F18E2AE86A46004CD0B4 /* HousesDestination.swift in Sources */,
 				D6F1F1742AE1C025004CD0B4 /* CharacterView.swift in Sources */,
+				D6F1F18B2AE8652E004CD0B4 /* CharactersByHouseViewModel.swift in Sources */,
 				D6F1F1792AE1C5FA004CD0B4 /* CharacterInfo.swift in Sources */,
 				D6F1F1532ADDD289004CD0B4 /* HogwartsHouses.swift in Sources */,
 				D6F1F1592ADDD55D004CD0B4 /* HouseCard.swift in Sources */,

@@ -41,89 +41,98 @@ enum HogHauses: CaseIterable, Identifiable{
             return "ravenclaw"
         }
     }
-    var firstColor : Color{
+    var firstColor : String{
         switch self {
         case .Gryffindor:
-            return Color("gryffindorFirst")
+            return "gryffindorFirst"
         case .Slytherin:
-            return Color("slytherinFirst")
+            return "slytherinFirst"
         case .Hufflepuff:
-            return Color("hufflepuffFirst")
+            return "hufflepuffFirst"
         case .Ravenclaw:
-            return Color("ravenclawFirst")
+            return "ravenclawFirst"
         }
     }
     
-    var sencondColor : Color{
+    var sencondColor : String{
         switch self {
         case .Gryffindor:
-            return Color("gryffindorSecond")
+            return "gryffindorSecond"
         case .Slytherin:
-            return Color("slytherinSecond")
+            return "slytherinSecond"
         case .Hufflepuff:
-            return Color("hufflepuffSecond")
+            return "hufflepuffSecond"
         case .Ravenclaw:
-            return Color("ravenclawSecond")
+            return "ravenclawSecond"
         }
     }
 }
 
 struct HogwartsHouses: View {
     
-//    var houses: [Houses] = [.init(name: "Gryffindow", badge: UIImage(named: "gryffindor")!),
-//        .init(name: "Slytherin", badge: UIImage(named: "slytherin")!),
-//        .init(name: "Hufflepuff", badge: UIImage(named: "hufflepuf")!),
-//        .init(name: "Ravenclaw", badge: UIImage(named: "ravenclaw")!)
-//    ]
+    @State private var path = NavigationPath()
     
     var body: some View {
         
-        VStack{
-            Image(uiImage: UIImage(named: "hogwarts")!)
-                    .resizable()
-                    .frame(width: 400, height: 300)
-                    .aspectRatio(contentMode: .fit)
-                    .clipped()
-                    .cornerRadius(50)
-                    .blur(radius: 1.5)
-                    .overlay(
-                        Text("Hogwarts Houses")
-                            .foregroundColor(.white)
-                            .font(.largeTitle)
-                            .bold()
-                            .shadow(color: .white, radius: 3, x: 5, y: 4)
-                    )
-//            ScrollView(.horizontal){
-//                LazyHStack(spacing: 20){
-//                    ForEach(HogHauses.allCases){
-//                        house in
-//                        HouseCard(
-//                            name: house.name,
-//                            badge: house.imageString,
-//                            firstColor: house.firstColor,
-//                            secondColor: house.sencondColor
-//                        )
-//                    }
-//                }
-//            }.padding(20)
-            List{
-                ForEach(HogHauses.allCases){
-                    house in
-                    HouseCard(
-                        name: house.name,
-                        badge: house.imageString,
-                        firstColor: house.firstColor,
-                        secondColor: house.sencondColor
-                    )
+        NavigationStack(path: $path){
+            VStack(spacing: 0){
+                Image(uiImage: UIImage(named: "hogwarts")!)
+                        .resizable()
+                        .frame(width: 400, height: 300)
+                        .aspectRatio(contentMode: .fit)
+                        .clipped()
+                        .cornerRadius(50)
+                        .blur(radius: 1.5)
+                        .overlay(
+                            Text("Hogwarts Houses")
+                                .foregroundColor(.white)
+                                .font(.largeTitle)
+                                .bold()
+                                .shadow(color: .white, radius: 3, x: 5, y: 4)
+                        )
+                        .background(Color("appBackground"))
+                ZStack{
+                    Color("appBackground")
+                        .ignoresSafeArea()
+                    VStack{
+                        ScrollView{
+                            VStack{
+                                ForEach(HogHauses.allCases){
+                                    house in
+                                    HouseCard(
+                                        name: house.name,
+                                        badge: house.imageString,
+                                        firstColor: Color(house.firstColor),
+                                        secondColor: Color(house.sencondColor)
+                                    )
+                                    .onTapGesture {
+                                        path.append(HousesDestinations.characterByHouse(
+                                            house: house.name.lowercased(),
+                                            firstColor: house.firstColor,
+                                            secondColor: house.sencondColor
+                                        ))
+                                        }
+                                }
+                            }
+                        }
+                        .scrollIndicators(.hidden)
+                        .padding(.top, 10)
+                        .navigationDestination(for: HousesDestinations.self, destination: { views in
+                            switch views {
+                            case .characterByHouse(let house, let firstColor, let secondColor):
+                                CharactersByHouse(house: house, firstColor: firstColor, secondColor: secondColor)
+                            default:
+                                ProgressView()
+                            }
+                            
+                        })
+                    }
+                    
                 }
-                .listRowSeparator(.hidden)
-                .listRowBackground(Color.clear)
             }
-            .scrollContentBackground(.hidden)
-            .background(Color("appBackground"))
+            .foregroundColor(Color("appBackground"))
+            .edgesIgnoringSafeArea([.top, .trailing, .leading])
         }
-        .background(Color("appBackground"))
-        .edgesIgnoringSafeArea(.top)
     }
 }
 

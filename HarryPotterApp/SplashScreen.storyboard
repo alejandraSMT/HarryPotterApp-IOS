@@ -22,7 +22,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="houses-icon" translatesAutoresizingMaskIntoConstraints="NO" id="0HQ-vi-ueN">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="houses_icon" translatesAutoresizingMaskIntoConstraints="NO" id="0HQ-vi-ueN">
                                 <rect key="frame" x="76.666666666666686" y="362" width="240" height="128"/>
                                 <color key="tintColor" name="listColor"/>
                                 <constraints>
@@ -48,7 +48,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="houses-icon" width="96" height="96"/>
+        <image name="houses_icon" width="96" height="96"/>
         <namedColor name="appBackground">
             <color red="0.14901960784313725" green="0.094117647058823528" blue="0.015686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

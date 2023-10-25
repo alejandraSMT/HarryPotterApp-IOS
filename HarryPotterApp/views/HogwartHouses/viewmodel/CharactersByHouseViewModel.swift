@@ -1,27 +1,25 @@
 //
-//  CharacterViewModel.swift
+//  CharactersByHouseViewModel.swift
 //  HarryPotterApp
 //
-//  Created by Alejandra San Martin on 19/10/23.
+//  Created by Alejandra San Martin on 24/10/23.
 //
 
 import Foundation
 
 @MainActor
-class CharacterViewModel: ObservableObject{
+class CharactersByHouseViewModel: ObservableObject{
     
+    @Published var charactersHouse: [Character] = []
+    @Published var isLoadingList: Bool = false
     
-    @Published var character: Character?
-    @Published var isLoadingCharacter: Bool = false
-    
-    init(characterId: String){
-        fetchData(characterId: characterId)
+    init(house: String){
+        fetchData(house: house)
     }
     
-    func fetchData(characterId: String){
-        
-        self.isLoadingCharacter = true
-        let endpoint = "https://hp-api.onrender.com/api/character/\(characterId)"
+    func fetchData(house:String){
+        self.isLoadingList = true
+        let endpoint = "https://hp-api.onrender.com/api/characters/house/\(house)"
         
         print("ENDPOINT: ")
         print(endpoint)
@@ -37,7 +35,7 @@ class CharacterViewModel: ObservableObject{
                     if let error = error {
                         print("Fetch failed: \(error.localizedDescription)")
                         DispatchQueue.main.async {
-                            self.isLoadingCharacter = false
+                            self.isLoadingList = false
                         }
                         return
                     }
@@ -47,15 +45,15 @@ class CharacterViewModel: ObservableObject{
                         do {
                             let responseD = try JSONDecoder().decode([Character].self, from: data)
                             DispatchQueue.main.async {
-                                self.character = responseD.first
-                                self.isLoadingCharacter = false
+                                self.charactersHouse = responseD
+                                self.isLoadingList = false
                             }
                             print(responseD)
                             return
                         } catch  {
                             print("\(error.localizedDescription)")
                             DispatchQueue.main.async {
-                                self.isLoadingCharacter = false
+                                self.isLoadingList = false
                             }
                             return
                         }
@@ -63,10 +61,4 @@ class CharacterViewModel: ObservableObject{
                 }.resume()
     }
     
-}
-
-enum HPErrors: Error{
-    case invalidUrl
-    case invalidResponse
-    case invalidData
 }
