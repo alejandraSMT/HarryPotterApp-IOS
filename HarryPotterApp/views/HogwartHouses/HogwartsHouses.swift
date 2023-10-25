@@ -78,10 +78,10 @@ struct HogwartsHouses: View {
             VStack(spacing: 0){
                 Image(uiImage: UIImage(named: "hogwarts")!)
                         .resizable()
-                        .frame(width: 400, height: 300)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 250)
                         .aspectRatio(contentMode: .fit)
                         .clipped()
-                        .cornerRadius(50)
                         .blur(radius: 1.5)
                         .overlay(
                             Text("Hogwarts Houses")
@@ -120,7 +120,9 @@ struct HogwartsHouses: View {
                         .navigationDestination(for: HousesDestinations.self, destination: { views in
                             switch views {
                             case .characterByHouse(let house, let firstColor, let secondColor):
-                                CharactersByHouse(house: house, firstColor: firstColor, secondColor: secondColor)
+                                CharactersByHouse(house: house, firstColor: firstColor, secondColor: secondColor, path: self.$path)
+                            case .characterProfile(let id):
+                                CharacterView(id: id)
                             default:
                                 ProgressView()
                             }

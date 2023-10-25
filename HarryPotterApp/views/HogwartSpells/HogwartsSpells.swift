@@ -15,57 +15,63 @@ struct HogwartsSpells: View {
     
     var body: some View {
         VStack{
-            Text("Spells")
-                .font(.title)
-                .bold()
-                .foregroundColor(.white)
-            NavigationStack{
-                
-                ScrollView{
-                    VStack(spacing: 20){
-                        ForEach(searchResults, id: \.id){
-                            spell in
-                            SpellsCard(spell: spell)
+                Text("Spells")
+                    .font(.title)
+                    .bold()
+                    .foregroundColor(.white)
+                    .padding(.top,30)
+            if(!spellsViewModel.isLoadingList){
+                NavigationStack{
+                    
+                    ScrollView{
+                        VStack(spacing: 20){
+                            ForEach(searchResults, id: \.id){
+                                spell in
+                                SpellsCard(spell: spell)
+                            }
+                            
                         }
-                        
+                        .frame(maxWidth: .infinity)
+                        .padding()
                     }
-                    .frame(maxWidth: .infinity)
-                    .padding()
+                    .background(
+                        Color("appBackground")
+                    )
                 }
-                .background(
-                    Color("appBackground")
-                )
-            }
-            .padding(20)
-            .searchable(text: $searchText,prompt: "Search a spell...")
-            .onAppear{
-                let appereance = UISearchBar.appearance()
-                appereance.backgroundColor = .clear
-                appereance.tintColor = UIColor.white
-                appereance.barTintColor = UIColor.clear
-                
-                UISearchTextField.appearance().backgroundColor = .white
-                
-                
-                let navigationBarAppearance = UINavigationBarAppearance()
-                navigationBarAppearance.configureWithOpaqueBackground()
-                navigationBarAppearance.titleTextAttributes = [
-                    NSAttributedString.Key.foregroundColor : UIColor.white
-                ]
-                navigationBarAppearance.backgroundColor = UIColor.clear
-                navigationBarAppearance.shadowColor = nil
-                
-                let navigationBar = UINavigationBar.appearance()
-                navigationBar.standardAppearance = navigationBarAppearance
-                navigationBar.compactAppearance = navigationBarAppearance
-                navigationBar.scrollEdgeAppearance = navigationBarAppearance
-                
-                let tabBarAppearance = UITabBarAppearance()
-                tabBarAppearance.configureWithOpaqueBackground()
-                tabBarAppearance.backgroundColor = UIColor.clear
-                
-                UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
-                UITabBar.appearance().standardAppearance = tabBarAppearance
+                .searchable(text: $searchText,prompt: "Search a spell...")
+                .onAppear{
+                    let appereance = UISearchBar.appearance()
+                    appereance.backgroundColor = .clear
+                    appereance.tintColor = UIColor.white
+                    appereance.barTintColor = UIColor.clear
+                    
+                    UISearchTextField.appearance().backgroundColor = .white
+                    
+                    
+                    let navigationBarAppearance = UINavigationBarAppearance()
+                    navigationBarAppearance.configureWithOpaqueBackground()
+                    navigationBarAppearance.titleTextAttributes = [
+                        NSAttributedString.Key.foregroundColor : UIColor.white
+                    ]
+                    navigationBarAppearance.backgroundColor = UIColor.clear
+                    navigationBarAppearance.shadowColor = nil
+                    
+                    let navigationBar = UINavigationBar.appearance()
+                    navigationBar.standardAppearance = navigationBarAppearance
+                    navigationBar.compactAppearance = navigationBarAppearance
+                    navigationBar.scrollEdgeAppearance = navigationBarAppearance
+                    
+                    let tabBarAppearance = UITabBarAppearance()
+                    tabBarAppearance.configureWithOpaqueBackground()
+                    tabBarAppearance.backgroundColor = UIColor.clear
+                    
+                    UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+                    UITabBar.appearance().standardAppearance = tabBarAppearance
+                }
+            }else{
+                ProgressView()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .tint(.white)
             }
         }
         .background(

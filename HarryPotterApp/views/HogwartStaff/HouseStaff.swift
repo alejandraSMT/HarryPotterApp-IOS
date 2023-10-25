@@ -11,10 +11,6 @@ struct HouseStaff: View {
     
     @StateObject var staffViewModel = StaffViewModel()
     
-    /*@State private var path = NavigationPath()
-    @StateObject var router: RoutingViewModel*/
-    //@State private var path = [HousesDestinations]()
-    
     @State private var path = NavigationPath()
 
     
@@ -31,26 +27,32 @@ struct HouseStaff: View {
                            .bold()
                            .foregroundColor(Color.white)
                            .padding(.top,10)
-                    ScrollView{
-                        VStack(spacing: 20){
-                            ForEach(staffViewModel.staffList, id: \.id){
-                                staff in
-                                CharacterCard(staff: staff)
-                                .onTapGesture {
-                                    path.append(HousesDestinations.characterProfile(id: staff.id))
-                                    }
+                   if(!staffViewModel.isLoading){
+                        ScrollView{
+                            VStack(spacing: 20){
+                                ForEach(staffViewModel.staffList, id: \.id){
+                                    staff in
+                                    CharacterCard(staff: staff)
+                                    .onTapGesture {
+                                        path.append(HousesDestinations.characterProfile(id: staff.id))
+                                        }
+                                }
                             }
                         }
-                    }
-                    .navigationDestination(for: HousesDestinations.self, destination: { views in
-                        switch views {
-                        case .characterProfile(let id):
-                            CharacterView(id: id)
-                        default:
-                            ProgressView()
-                        }
-                        
-                    })
+                        .navigationDestination(for: HousesDestinations.self, destination: { views in
+                            switch views {
+                            case .characterProfile(let id):
+                                CharacterView(id: id)
+                            default:
+                                ProgressView()
+                            }
+                            
+                        })
+                   }else{
+                       ProgressView()
+                           .tint(.white)
+                           .frame(maxWidth: .infinity, maxHeight: .infinity)
+                   }
                 }
                 .padding(20)
            }

@@ -10,11 +10,11 @@ import SwiftUI
 struct CharacterView: View {
     
     @State var id: String
-    @ObservedObject var characterViewModel: CharacterViewModel
+    @StateObject var characterViewModel: CharacterViewModel
     
     init(id: String){
         self.id = id
-        self.characterViewModel = CharacterViewModel(characterId: id)
+        self._characterViewModel = StateObject(wrappedValue: CharacterViewModel(characterId: id))
     }
     
     var body: some View {

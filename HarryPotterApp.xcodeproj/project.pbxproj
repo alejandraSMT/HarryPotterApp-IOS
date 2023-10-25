@@ -34,6 +34,7 @@
 		D6F1F1882AE8605D004CD0B4 /* CharactersByHouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F1872AE8605D004CD0B4 /* CharactersByHouse.swift */; };
 		D6F1F18B2AE8652E004CD0B4 /* CharactersByHouseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F18A2AE8652E004CD0B4 /* CharactersByHouseViewModel.swift */; };
 		D6F1F18E2AE86A46004CD0B4 /* HousesDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F18D2AE86A46004CD0B4 /* HousesDestination.swift */; };
+		D6F1F1902AE95619004CD0B4 /* CardCharacterByHouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F18F2AE95619004CD0B4 /* CardCharacterByHouse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		D6F1F1872AE8605D004CD0B4 /* CharactersByHouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersByHouse.swift; sourceTree = "<group>"; };
 		D6F1F18A2AE8652E004CD0B4 /* CharactersByHouseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersByHouseViewModel.swift; sourceTree = "<group>"; };
 		D6F1F18D2AE86A46004CD0B4 /* HousesDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesDestination.swift; sourceTree = "<group>"; };
+		D6F1F18F2AE95619004CD0B4 /* CardCharacterByHouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCharacterByHouse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 				D6F1F1522ADDD289004CD0B4 /* HogwartsHouses.swift */,
 				D6F1F1582ADDD55D004CD0B4 /* HouseCard.swift */,
 				D6F1F1872AE8605D004CD0B4 /* CharactersByHouse.swift */,
+				D6F1F18F2AE95619004CD0B4 /* CardCharacterByHouse.swift */,
 			);
 			path = HogwartHouses;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				D6F1F1742AE1C025004CD0B4 /* CharacterView.swift in Sources */,
 				D6F1F18B2AE8652E004CD0B4 /* CharactersByHouseViewModel.swift in Sources */,
 				D6F1F1792AE1C5FA004CD0B4 /* CharacterInfo.swift in Sources */,
+				D6F1F1902AE95619004CD0B4 /* CardCharacterByHouse.swift in Sources */,
 				D6F1F1532ADDD289004CD0B4 /* HogwartsHouses.swift in Sources */,
 				D6F1F1592ADDD55D004CD0B4 /* HouseCard.swift in Sources */,
 				D6F1F1862AE1DDD7004CD0B4 /* CharacterViewModel.swift in Sources */,
@@ -600,8 +604,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = SplashScreen.storyboard;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -630,8 +636,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = SplashScreen.storyboard;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
