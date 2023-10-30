@@ -25,7 +25,6 @@
 		D6F1F1682ADE0914004CD0B4 /* Spell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F1672ADE0914004CD0B4 /* Spell.swift */; };
 		D6F1F16B2ADE0BC0004CD0B4 /* SpellsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F16A2ADE0BC0004CD0B4 /* SpellsViewModel.swift */; };
 		D6F1F16E2ADE0F06004CD0B4 /* StaffViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F16D2ADE0F06004CD0B4 /* StaffViewModel.swift */; };
-		D6F1F1702AE1B7B0004CD0B4 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6F1F16F2AE1B7B0004CD0B4 /* SplashScreen.storyboard */; };
 		D6F1F1742AE1C025004CD0B4 /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F1732AE1C025004CD0B4 /* CharacterView.swift */; };
 		D6F1F1772AE1C0A2004CD0B4 /* CharacterPhotoFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F1762AE1C0A2004CD0B4 /* CharacterPhotoFrame.swift */; };
 		D6F1F1792AE1C5FA004CD0B4 /* CharacterInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F1782AE1C5F9004CD0B4 /* CharacterInfo.swift */; };
@@ -38,6 +37,7 @@
 		D6F1F1922AEFE823004CD0B4 /* HeaderHouses.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F1912AEFE823004CD0B4 /* HeaderHouses.swift */; };
 		D6F1F1942AEFE9AB004CD0B4 /* StaffHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F1932AEFE9AB004CD0B4 /* StaffHeader.swift */; };
 		D6F1F1962AEFEA89004CD0B4 /* SpellsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1F1952AEFEA89004CD0B4 /* SpellsHeader.swift */; };
+		D6F1F19A2AF045E6004CD0B4 /* SplashScreenOfficial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6F1F1992AF045E6004CD0B4 /* SplashScreenOfficial.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +79,6 @@
 		D6F1F1672ADE0914004CD0B4 /* Spell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spell.swift; sourceTree = "<group>"; };
 		D6F1F16A2ADE0BC0004CD0B4 /* SpellsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsViewModel.swift; sourceTree = "<group>"; };
 		D6F1F16D2ADE0F06004CD0B4 /* StaffViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffViewModel.swift; sourceTree = "<group>"; };
-		D6F1F16F2AE1B7B0004CD0B4 /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
 		D6F1F1732AE1C025004CD0B4 /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
 		D6F1F1762AE1C0A2004CD0B4 /* CharacterPhotoFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterPhotoFrame.swift; sourceTree = "<group>"; };
 		D6F1F1782AE1C5F9004CD0B4 /* CharacterInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterInfo.swift; sourceTree = "<group>"; };
@@ -92,6 +91,7 @@
 		D6F1F1912AEFE823004CD0B4 /* HeaderHouses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderHouses.swift; sourceTree = "<group>"; };
 		D6F1F1932AEFE9AB004CD0B4 /* StaffHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffHeader.swift; sourceTree = "<group>"; };
 		D6F1F1952AEFEA89004CD0B4 /* SpellsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsHeader.swift; sourceTree = "<group>"; };
+		D6F1F1992AF045E6004CD0B4 /* SplashScreenOfficial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreenOfficial.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +122,7 @@
 		D6F1F1192ADDD233004CD0B4 = {
 			isa = PBXGroup;
 			children = (
+				D6F1F1992AF045E6004CD0B4 /* SplashScreenOfficial.storyboard */,
 				D6F1F1242ADDD233004CD0B4 /* HarryPotterApp */,
 				D6F1F1352ADDD235004CD0B4 /* HarryPotterAppTests */,
 				D6F1F13F2ADDD235004CD0B4 /* HarryPotterAppUITests */,
@@ -149,7 +150,6 @@
 				D6F1F1272ADDD233004CD0B4 /* ContentView.swift */,
 				D6F1F1292ADDD235004CD0B4 /* Assets.xcassets */,
 				D6F1F12B2ADDD235004CD0B4 /* Preview Content */,
-				D6F1F16F2AE1B7B0004CD0B4 /* SplashScreen.storyboard */,
 			);
 			path = HarryPotterApp;
 			sourceTree = "<group>";
@@ -399,8 +399,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6F1F19A2AF045E6004CD0B4 /* SplashScreenOfficial.storyboard in Resources */,
 				D6F1F12D2ADDD235004CD0B4 /* Preview Assets.xcassets in Resources */,
-				D6F1F1702AE1B7B0004CD0B4 /* SplashScreen.storyboard in Resources */,
 				D6F1F12A2ADDD235004CD0B4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -615,7 +615,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = SplashScreen.storyboard;
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashScreenOfficial.storyboard;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -647,7 +647,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = SplashScreen.storyboard;
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashScreenOfficial.storyboard;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";

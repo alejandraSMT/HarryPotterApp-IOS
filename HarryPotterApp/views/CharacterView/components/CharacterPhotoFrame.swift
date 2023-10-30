@@ -33,6 +33,11 @@ struct CharacterPhotoFrame: View {
                 Rectangle()
                     .frame(width: 170, height: 200)
                     .cornerRadius(20, corners: [.topLeft, .topRight])
+                    .overlay(
+                        Image(uiImage: UIImage(named: "hpLogo")!)
+                            .resizable()
+                            .frame(width: 60, height: 70)
+                    )
             }
             Rectangle()
                 .frame(width: 170, height: 30)

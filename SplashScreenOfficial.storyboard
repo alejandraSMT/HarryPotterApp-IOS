@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hpLogo" translatesAutoresizingMaskIntoConstraints="NO" id="2Mf-wF-gaj">
+                                <rect key="frame" x="76.666666666666686" y="374.66666666666669" width="240" height="144.00000000000006"/>
+                                <color key="backgroundColor" name="appBackground"/>
+                                <color key="tintColor" name="listColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="UbC-ch-XKf"/>
+                                    <constraint firstAttribute="height" constant="128" id="jFT-AW-QIj"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="appBackground"/>
+                        <color key="tintColor" name="characterColor"/>
+                        <constraints>
+                            <constraint firstItem="2Mf-wF-gaj" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="7cq-gW-1ha"/>
+                            <constraint firstItem="2Mf-wF-gaj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="315.66666666666669" id="JaG-4n-Hwi"/>
+                            <constraint firstItem="2Mf-wF-gaj" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="jbN-fa-VCW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="-17"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hpLogo" width="144" height="144"/>
+        <namedColor name="appBackground">
+            <color red="0.10980392156862745" green="0.10980392156862745" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="characterColor">
+            <color red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="listColor">
+            <color red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
