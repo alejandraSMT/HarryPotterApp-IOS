@@ -13,7 +13,7 @@ enum HogHauses: CaseIterable, Identifiable{
     case Slytherin
     case Hufflepuff
     case Ravenclaw
-
+    
     var id: Self {return self}
     
     var name: String{
@@ -66,74 +66,89 @@ enum HogHauses: CaseIterable, Identifiable{
             return "ravenclawSecond"
         }
     }
+    
+    var darkerColor: String{
+        switch self {
+        case .Gryffindor:
+            return "gryffindorDarker"
+        case .Slytherin:
+            return "slytherinDarker"
+        case .Hufflepuff:
+            return "hufflepuffDarker"
+        case .Ravenclaw:
+            return "ravenclawDarker"
+        }
+    }
 }
 
 struct HogwartsHouses: View {
     
     @State private var path = NavigationPath()
+    private let adaptativeColumns = [GridItem(.adaptive(minimum: 170))]
+    private let images = [UIImage(named: "image1"),UIImage(named: "image2"),UIImage(named: "image3"),UIImage(named: "image4")]
+    @State private var index = 0
     
     var body: some View {
         
         NavigationStack(path: $path){
-            VStack(spacing: 0){
-                Image(uiImage: UIImage(named: "hogwarts")!)
-                        .resizable()
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 250)
-                        .aspectRatio(contentMode: .fit)
-                        .clipped()
-                        .blur(radius: 1.5)
-                        .overlay(
-                            Text("Hogwarts Houses")
-                                .foregroundColor(.white)
-                                .font(.largeTitle)
-                                .bold()
-                                .shadow(color: .white, radius: 3, x: 5, y: 4)
-                        )
-                        .background(Color("appBackground"))
-                ZStack{
-                    Color("appBackground")
-                        .ignoresSafeArea()
-                    VStack{
-                        ScrollView{
-                            VStack{
-                                ForEach(HogHauses.allCases){
-                                    house in
-                                    HouseCard(
-                                        name: house.name,
-                                        badge: house.imageString,
-                                        firstColor: Color(house.firstColor),
-                                        secondColor: Color(house.sencondColor)
-                                    )
-                                    .onTapGesture {
-                                        path.append(HousesDestinations.characterByHouse(
-                                            house: house.name.lowercased(),
-                                            firstColor: house.firstColor,
-                                            secondColor: house.sencondColor
-                                        ))
-                                        }
-                                }
+            ZStack{
+                Color("appBackground")
+                    .ignoresSafeArea()
+                VStack{
+                    HeaderHouses()
+                    
+                    ScrollView(.vertical){
+                        TabView{
+                            ForEach(images, id:\.self){
+                                image in
+                                Image(uiImage: image!)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(maxWidth: 400)
+                                    .frame(maxHeight: 250)
+                                    .cornerRadius(20)
                             }
                         }
-                        .scrollIndicators(.hidden)
+                        .padding(.horizontal,20)
+                        .frame(minHeight: 250)
+                        .tabViewStyle(PageTabViewStyle())
+                        LazyVGrid(columns: adaptativeColumns, spacing: 20){
+                            ForEach(HogHauses.allCases){
+                                house in
+                                HouseCard(
+                                    name: house.name,
+                                    badge: house.imageString,
+                                    firstColor: Color(house.firstColor),
+                                    secondColor: Color(house.sencondColor))
+                                .onTapGesture {
+                                    path.append(HousesDestinations.characterByHouse(
+                                        house: house.name.lowercased(),
+                                        firstColor: house.firstColor,
+                                        secondColor: house.sencondColor,
+                                        darkerColor: house.darkerColor
+                                    ))
+                                    
+                                }
+                                
+                            }
+                            
+                        }
+                        .frame(maxHeight: .infinity)
+                        .background(Color("appBackground"))
                         .padding(.top, 10)
                         .navigationDestination(for: HousesDestinations.self, destination: { views in
                             switch views {
-                            case .characterByHouse(let house, let firstColor, let secondColor):
-                                CharactersByHouse(house: house, firstColor: firstColor, secondColor: secondColor, path: self.$path)
+                            case .characterByHouse(let house, let firstColor, let secondColor, let darkerColor):
+                                CharactersByHouse(house: house, firstColor: firstColor, secondColor: secondColor, darkerColor: darkerColor , path: self.$path)
                             case .characterProfile(let id):
                                 CharacterView(id: id)
-                            default:
-                                ProgressView()
                             }
-                            
                         })
                     }
-                    
+                    .frame(maxHeight: .infinity)
+                    .padding(.top, 10)
                 }
             }
-            .foregroundColor(Color("appBackground"))
-            .edgesIgnoringSafeArea([.top, .trailing, .leading])
         }
     }
 }

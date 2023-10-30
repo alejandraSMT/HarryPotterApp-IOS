@@ -26,22 +26,21 @@ struct CharacterPhotoFrame: View {
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 200, height: 220)
-                    .border(Color("frameCharacter"),width: 5)
+                    .frame(width: 170, height: 200)
                     .cornerRadius(20, corners: [.topLeft, .topRight])
                     
             } placeholder: {
                 Rectangle()
-                    .frame(width: 200, height: 220)
+                    .frame(width: 170, height: 200)
                     .cornerRadius(20, corners: [.topLeft, .topRight])
             }
             Rectangle()
-                .frame(width: 200, height: 50)
+                .frame(width: 170, height: 30)
                 .cornerRadius(20, corners: [.bottomLeft, .bottomRight])
                 .foregroundColor(Color("characterColor"))
                 .overlay(
                     Text(validateHouse()!)
-                        .font(.title3)
+                        .font(.subheadline)
                 )
         }
     }

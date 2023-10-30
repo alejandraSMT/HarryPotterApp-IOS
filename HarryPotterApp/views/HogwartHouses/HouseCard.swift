@@ -19,9 +19,9 @@ struct HouseCard: View {
             HStack{
                 Image(badge)
                     .resizable()
-                    .frame(width: 140,height: 140)
+                    .frame(width: 120,height: 120)
             }
-            .frame(width: 350, height: 180)
+            .frame(width: 170, height: 170)
             .background(
                 LinearGradient(gradient: Gradient(colors: [firstColor,secondColor]), startPoint: .top, endPoint: .bottom)
                 )

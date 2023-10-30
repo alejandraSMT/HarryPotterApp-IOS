@@ -22,24 +22,24 @@ struct CharacterView: View {
             if !self.characterViewModel.isLoadingCharacter{
                 ScrollView{
                     Text("\(characterViewModel.character?.name ?? "Unnamed")")
-                        .font(.largeTitle)
+                        .font(.title2)
                         .foregroundColor(.white)
                         .padding(2)
                     Text("Born: \(characterViewModel.character?.dateOfBirth ?? "Not especified") - \( characterViewModel.character?.gender?.capitalized ?? "Not especified" )")
-                        .font(.subheadline)
+                        .font(.caption)
                         .foregroundColor(.gray)
                         .padding(.bottom, 20)
                     CharacterPhotoFrame(
                         photoUrl: characterViewModel.character?.image ?? "",
                         house: characterViewModel.character?.house
                     )
-                        .padding(.bottom, 20)
+                    .padding(.bottom, 10)
                     CharacterInfo(
                         species: characterViewModel.character?.species ?? "Not specified",
                         status: characterViewModel.character?.alive,
                         patronus: characterViewModel.character?.patronus
                     )
-                        .padding(.bottom, 20)
+                        .padding(.bottom, 10)
                     if(characterViewModel.character?.wand.core != "" || characterViewModel.character?.wand.wood != "" || characterViewModel.character?.wand.length != nil){
                         WandInfo(
                             wand: characterViewModel.character?.wand

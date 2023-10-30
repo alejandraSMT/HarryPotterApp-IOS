@@ -21,40 +21,38 @@ struct HouseStaff: View {
                Color("appBackground")
                    .ignoresSafeArea()
                
-               VStack(spacing: 20){
-                   Text("Hogwarts Staff")
-                           .font(.title)
-                           .bold()
-                           .foregroundColor(Color.white)
-                           .padding(.top,10)
-                   if(!staffViewModel.isLoading){
-                        ScrollView{
-                            VStack(spacing: 20){
-                                ForEach(staffViewModel.staffList, id: \.id){
-                                    staff in
-                                    CharacterCard(staff: staff)
-                                    .onTapGesture {
-                                        path.append(HousesDestinations.characterProfile(id: staff.id))
-                                        }
+               VStack{
+                   StaffHeader()
+                   VStack(spacing: 20){
+                       if(!staffViewModel.isLoading){
+                            ScrollView{
+                                VStack(spacing: 20){
+                                    ForEach(staffViewModel.staffList, id: \.id){
+                                        staff in
+                                        CharacterCard(staff: staff)
+                                        .onTapGesture {
+                                            path.append(HousesDestinations.characterProfile(id: staff.id))
+                                            }
+                                    }
                                 }
                             }
-                        }
-                        .navigationDestination(for: HousesDestinations.self, destination: { views in
-                            switch views {
-                            case .characterProfile(let id):
-                                CharacterView(id: id)
-                            default:
-                                ProgressView()
-                            }
-                            
-                        })
-                   }else{
-                       ProgressView()
-                           .tint(.white)
-                           .frame(maxWidth: .infinity, maxHeight: .infinity)
-                   }
-                }
-                .padding(20)
+                            .navigationDestination(for: HousesDestinations.self, destination: { views in
+                                switch views {
+                                case .characterProfile(let id):
+                                    CharacterView(id: id)
+                                default:
+                                    ProgressView()
+                                }
+                                
+                            })
+                       }else{
+                           ProgressView()
+                               .tint(.white)
+                               .frame(maxWidth: .infinity, maxHeight: .infinity)
+                       }
+                    }
+                    .padding(20)
+               }
            }
         }
     }

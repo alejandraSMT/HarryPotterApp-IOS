@@ -9,5 +9,5 @@ import Foundation
 
 enum HousesDestinations: Hashable{
     case characterProfile(id: String)
-    case characterByHouse(house: String, firstColor: String, secondColor: String)
+    case characterByHouse(house: String, firstColor: String, secondColor: String, darkerColor: String)
 }

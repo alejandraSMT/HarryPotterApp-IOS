@@ -24,13 +24,14 @@ struct CharacterCard: View {
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 50, height: 50)
+                    .frame(width: 70, height: 70)
                     .clipShape(Circle())
                     .padding(.horizontal,10)
             } placeholder: {
                 Circle()
                     .foregroundColor(.gray)
-                    .frame(width: 50,height: 50)
+                    .frame(width: 70,height: 70)
+                    .padding(.horizontal,10)
             }
             VStack(alignment: .leading){
                 Text("\(staff.name ?? "Unnamed")")
@@ -41,6 +42,7 @@ struct CharacterCard: View {
         }
         .padding(10)
         .frame(maxWidth: .infinity,alignment: .leading)
+        .frame(height: 90)
         .background(Color("listColor"))
         .clipShape(RoundedRectangle(cornerRadius: 20.0))
     }

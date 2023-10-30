@@ -30,52 +30,74 @@ struct CharacterInfo: View {
     
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 10){
-            HStack(alignment: .center, spacing: 40){
-                Rectangle()
-                    .frame(width: 110, height: 50)
-                    .cornerRadius(20)
-                    .foregroundColor(Color(hex:"9D826F"))
-                    .overlay(
-                        Text("Species: ")
-                            .font(.title3)
-                            .foregroundColor(.white)
-                    )
-                HStack(alignment: .center){
-                    Text("\(species.capitalized)")
-                    .font(.title3)
-                    .foregroundColor(.white)
-                }
+        
+        VStack(spacing: 20){
+            HStack{
+                Text("Species: ")
+                Spacer()
+                Text("\(species.capitalized)")
             }
-            HStack(alignment: .center, spacing: 40){
-                Rectangle()
-                    .frame(width: 110, height: 50)
-                    .cornerRadius(20)
-                    .foregroundColor(Color(hex:"9C9D6F"))
-                    .overlay(
-                        Text("Status: ")
-                            .font(.title3)
-                            .foregroundColor(.white)
-                    )
+            HStack{
+                Text("Status: ")
+                Spacer()
                 Text("\(validate())")
-                    .font(.title3)
-                    .foregroundColor(.white)
             }
-            HStack(alignment: .center, spacing: 40){
-                Rectangle()
-                    .frame(width: 110, height: 50)
-                    .cornerRadius(20)
-                    .foregroundColor(Color(hex:"6F9D98"))
-                    .overlay(
-                        Text("Patronus: ")
-                            .font(.title3)
-                            .foregroundColor(.white)
-                    )
+            HStack{
+                Text("Patronus: ")
+                Spacer()
                 Text(validatePatronus()!)
-                    .font(.title3)
-                    .foregroundColor(.white)
             }
         }
+        .foregroundColor(.white)
+        .padding(20)
+        .background(Color("infoColor"))
+        .cornerRadius(20)
+//        VStack(alignment: .leading, spacing: 10){
+//            HStack(alignment: .center, spacing: 40){
+//                Rectangle()
+//                    .frame(width: 110, height: 50)
+//                    .cornerRadius(20)
+//                    .foregroundColor(Color(hex:"9D826F"))
+//                    .overlay(
+//                        Text("Species: ")
+//                            .font(.title3)
+//                            .foregroundColor(.white)
+//                    )
+//                HStack(alignment: .center){
+//                    Text("\(species.capitalized)")
+//                    .font(.title3)
+//                    .foregroundColor(.white)
+//                }
+//            }
+//            HStack(alignment: .center, spacing: 40){
+//                Rectangle()
+//                    .frame(width: 110, height: 50)
+//                    .cornerRadius(20)
+//                    .foregroundColor(Color(hex:"9C9D6F"))
+//                    .overlay(
+//                        Text("Status: ")
+//                            .font(.title3)
+//                            .foregroundColor(.white)
+//                    )
+//                Text("\(validate())")
+//                    .font(.title3)
+//                    .foregroundColor(.white)
+//            }
+//            HStack(alignment: .center, spacing: 40){
+//                Rectangle()
+//                    .frame(width: 110, height: 50)
+//                    .cornerRadius(20)
+//                    .foregroundColor(Color(hex:"6F9D98"))
+//                    .overlay(
+//                        Text("Patronus: ")
+//                            .font(.title3)
+//                            .foregroundColor(.white)
+//                    )
+//                Text(validatePatronus()!)
+//                    .font(.title3)
+//                    .foregroundColor(.white)
+//            }
+//        }
     }
 }
 

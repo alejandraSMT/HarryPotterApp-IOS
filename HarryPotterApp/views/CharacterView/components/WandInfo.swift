@@ -11,46 +11,66 @@ struct WandInfo: View {
     
     var wand: Wand?
     
-    func validateLength() -> String? {
-        if(self.wand?.length == nil){
-            return ""
+//    func validateLength() -> String{
+//        if(self.wand?.length == nil){
+//            return "No length specified"
+//        }
+//        return "\(self.wand?.length)"
+//    }
+    
+    func validateWood() -> String{
+        if(self.wand?.wood == "" || self.wand?.wood == nil){
+            return "No wood specified"
         }
-        return "\(String(describing: self.wand?.length)) inch "
+        return (self.wand?.wood)!.capitalized
     }
     
-    func validateWood() -> String {
-        if(self.wand?.wood == ""){
-            return ""
+    func validateCore() -> String{
+        if(self.wand?.core == "" || self.wand?.wood == nil){
+            return "No core specified"
         }
-        return " made of \(String(describing: self.wand?.wood ?? "no wood")) "
+        return (self.wand?.core)!.capitalized
     }
     
-    func validateCore() -> String {
-        if(self.wand?.core == ""){
-            return ""
-        }
-        return "with \(String(describing: self.wand?.core ?? "no")) core."
-    }
     
     var body: some View {
-        VStack(alignment: .center, spacing: 2){
-            Rectangle()
-                .frame(width: 110, height: 50)
-                .cornerRadius(20)
-                .foregroundColor(Color(hex:"6F7C9D"))
-                .overlay(
-                    Text("Wand: ")
-                        .font(.title3)
-                        .foregroundColor(.white)
-                )
-                .padding(.bottom, 10)
-            
-            Text(String.getFinalString(wand: wand ?? Wand(wood: nil, core: nil, length: nil)))
-                    .font(.title3)
-                    .foregroundColor(.white)
-                    .multilineTextAlignment(.center)
+        let lengthString = self.wand?.length.map { String($0) } ?? "No length specified"
+        
+        VStack(alignment: .leading){
+            Text("Wand: ")
+                .foregroundColor(.white)
+                .font(.title3)
+            HStack{
+                VStack(alignment: .leading){
+                    HStack{
+                        Text("Wood: ")
+                            .foregroundColor(.gray)
+                        Text(validateWood())
+                            .foregroundColor(.white)
+                    }
+                    HStack{
+                        Text("Length: ")
+                            .foregroundColor(.gray)
+                        Text(lengthString)
+                            .foregroundColor(.white)
+                    }
+                    HStack{
+                        Text("Core: ")
+                            .foregroundColor(.gray)
+                        Text(validateCore())
+                            .foregroundColor(.white)
+                    }
+                }
+                Spacer()
+                Image(uiImage: UIImage(named: "wand")!)
+                    .resizable()
+                    .frame(maxWidth: 70, maxHeight: 100)
+                    .scaledToFit()
+            }
         }
-        .frame(maxWidth: 300)
+        .padding(20)
+        .background(Color("wandColor"))
+        .cornerRadius(20)
     }
     
 }

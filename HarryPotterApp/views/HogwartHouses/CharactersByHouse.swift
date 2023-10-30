@@ -12,15 +12,17 @@ struct CharactersByHouse: View {
     var house: String
     var firstColor: String
     var secondColor: String
+    var darkerColor: String
     // binding path from previous view
     @Binding var path : NavigationPath
     
     @StateObject var CBHViewModel: CharactersByHouseViewModel
     
-    init(house: String, firstColor: String, secondColor: String, path: Binding<NavigationPath>){
+    init(house: String, firstColor: String, secondColor: String, darkerColor: String, path: Binding<NavigationPath>){
         self.house = house
         self.firstColor = firstColor
         self.secondColor = secondColor
+        self.darkerColor = darkerColor
         self._path = path
         self._CBHViewModel = StateObject(wrappedValue: CharactersByHouseViewModel(house: house))
     }
@@ -36,14 +38,14 @@ struct CharactersByHouse: View {
                 if(!CBHViewModel.isLoadingList){
                     VStack(alignment: .leading, spacing:3){
                             
-                            LinearGradient(colors: [Color(firstColor),Color(secondColor)], startPoint: .top, endPoint: .bottom)
+                            LinearGradient(colors: [Color(darkerColor),Color(darkerColor)], startPoint: .top, endPoint: .bottom)
                                 .foregroundColor(.clear)
                                 .frame(maxWidth: .infinity)
-                                .frame(height: 150)
+                                .frame(height: 100)
                                 .overlay(
                                     Text(house.capitalized)
                                         .padding(.top,40)
-                                        .font(.title)
+                                        .font(.title3)
                                         .foregroundColor(.white)
                                         .bold()
                                 )
@@ -97,6 +99,7 @@ struct CharactersByHouse: View {
                                     }
                                 }
                                 .padding(.vertical, 10)
+                                .padding(.horizontal, 10)
                                 .edgesIgnoringSafeArea([.top, .trailing, .leading])
                         }
                 }else{
@@ -113,6 +116,6 @@ struct CharactersByHouse: View {
 
 struct CharactersByHouse_Previews: PreviewProvider {
     static var previews: some View {
-        CharactersByHouse(house: "gryffindor", firstColor: "gryffindorFirst", secondColor: "gryffindorSecond", path: .constant(NavigationPath()))
+        CharactersByHouse(house: "gryffindor", firstColor: "gryffindorFirst", secondColor: "gryffindorSecond", darkerColor: "gryffindorDarker", path: .constant(NavigationPath()))
     }
 }

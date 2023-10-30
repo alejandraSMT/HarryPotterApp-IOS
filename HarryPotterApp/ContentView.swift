@@ -24,14 +24,14 @@ struct ContentView: View {
                     Label("Spells",systemImage: "wand.and.stars.inverse")
                 }
         }
-        .tint(Color("selectedTab"))
+        .tint(.white)
         .onAppear{
             
             let appereance = UITabBar.appearance()
-            appereance.barTintColor = UIColor(Color("tabBar"))
-            appereance.backgroundColor = UIColor(Color("tabBar"))
+            appereance.barTintColor = UIColor(Color("topBarBackground"))
+            appereance.backgroundColor = UIColor(Color("topBarBackground"))
             appereance.isTranslucent = true
-            appereance.unselectedItemTintColor = .lightGray
+            appereance.unselectedItemTintColor = .gray
         }
     }
 }

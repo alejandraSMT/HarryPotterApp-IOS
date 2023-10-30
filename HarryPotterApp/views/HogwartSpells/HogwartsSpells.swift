@@ -15,11 +15,7 @@ struct HogwartsSpells: View {
     
     var body: some View {
         VStack{
-                Text("Spells")
-                    .font(.title)
-                    .bold()
-                    .foregroundColor(.white)
-                    .padding(.top,30)
+            SpellsHeader()
             if(!spellsViewModel.isLoadingList){
                 NavigationStack{
                     
